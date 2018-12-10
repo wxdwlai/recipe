@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dell.search.MainActivity">
+
+    <item
+        android:id="@+id/zhuye"
+        android:title="主页"
+        android:actionLayout="@layout/activity_main"
+        />
+
+    <item
+        android:id="@+id/shequ"
+        android:title="社区"
+        android:actionLayout="@layout/activity_main"/>
+</menu>

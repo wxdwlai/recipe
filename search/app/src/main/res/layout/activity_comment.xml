@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.search.ComunityActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@+id/rolComment">
+            <Button
+                android:id="@+id/bactToResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="返回"/>
+            <TextView
+                android:id="@+id/numOfComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="25dp"
+                android:hint="全部评论"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--评论的核心内容-->
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/line3"
+                android:orientation="vertical">
+
+                <include layout="@layout/comment" />
+                <!--加横线-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c9c7c7"/>
+
+                <ListView
+                    android:id="@+id/rolComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="NotSibling">
+                </ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom">
+                <EditText
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/send"
+                    android:layout_weight="14"
+                    android:maxLines="3"
+                    android:layout_gravity="bottom|left"
+                    android:hint="我想说两句" />
+                <Button
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom|right"
+                    android:hint="发送" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/line2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<include layout="@layout/comment" />-->
+            <!--&lt;!&ndash;加横线&ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#c9c7c7"/>-->
+
+            <!--<ListView-->
+                <!--android:id="@+id/rolComment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--tools:ignore="NotSibling">-->
+            <!--</ListView>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/line3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_gravity="bottom">-->
+            <!--<EditText-->
+                <!--android:id="@+id/text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toLeftOf="@+id/send"-->
+                <!--android:layout_weight="14"-->
+                <!--android:maxLines="3"-->
+                <!--android:hint="我想说两句" />-->
+            <!--<Button-->
+                <!--android:id="@+id/send"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="bottom|right"-->
+                <!--android:hint="发送" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="bottom">-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_toLeftOf="@+id/send"-->
+            <!--android:layout_weight="14"-->
+            <!--android:hint="我想说两句" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/send"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="发送" />-->
+    <!--</LinearLayout>-->
+
+
+
+
+</android.support.constraint.ConstraintLayout>
